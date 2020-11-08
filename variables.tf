@@ -127,7 +127,6 @@ variable "envs" {
 
 variable "node_selector" {
 
-    type    = object
     default = null
 
 }
