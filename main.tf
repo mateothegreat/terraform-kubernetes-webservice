@@ -183,7 +183,7 @@ resource "kubernetes_ingress" "ingress" {
 
         tls {
 
-            hosts       = var.ingress_host
+            hosts       = [ var.ingress_host ]
             secret_name = var.ingress_secret_name
 
         }
