@@ -84,7 +84,7 @@ resource "kubernetes_deployment" "deployment" {
 
                 image_pull_secrets {
 
-                    name = var.ingress_secret_name
+                    name = var.image_pull_secret
 
                 }
 
