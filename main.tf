@@ -79,9 +79,14 @@ resource "kubernetes_deployment" "deployment" {
 
             spec {
 
+                node_selector                    = var.node_selector
                 termination_grace_period_seconds = var.termination_grace_period_seconds
 
-                node_selector = var.node_selector
+                image_pull_secrets {
+
+                    name = var.ingress_secret_name
+
+                }
 
                 container {
 

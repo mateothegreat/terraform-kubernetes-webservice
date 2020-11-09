@@ -188,3 +188,9 @@ variable "ingress_secret_name" {
     type = string
 
 }
+
+variable "image_pull_secret" {
+
+    type = string
+
+}
