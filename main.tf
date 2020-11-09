@@ -177,6 +177,12 @@ resource "kubernetes_ingress" "ingress" {
         name      = var.name
         namespace = var.namespace
 
+        annotations = {
+
+            "nginx.ingress.kubernetes.io/ssl-redirect" = "false"
+
+        }
+
     }
 
     spec {
